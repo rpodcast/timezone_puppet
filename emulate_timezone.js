@@ -25,14 +25,16 @@ const puppeteer = require('puppeteer');
     //await page.emulateTimezone('Asia/Makassar');
 
     // go to the web
+    //let shinycal_page = "http://localhost:6789";
+    let shinycal_page = "https://rpodcast.shinyapps.io/shinycal"
+
     await page.goto('https://whatismytimezone.com');
-    var ss = await page.screenshot({path: "timezone_america_new_york_screenshot.png"});
+    var ss = await page.screenshot({path: "screenshots/timezone_america_new_york_screenshot.png"});
 
-
-    await page.goto('https://rpodcast.shinyapps.io/shinycal');
+    await page.goto(shinycal_page);
     await page.waitForTimeout(9000);
 
-    var ss = await page.screenshot({path: "shinycal_america_new_york_screenshot.png"});
+    var ss = await page.screenshot({path: "screenshots/shinycal_america_new_york_screenshot.png"});
 
     // America/Chicago
     await page.emulateTimezone('America/Chicago');
@@ -41,13 +43,13 @@ const puppeteer = require('puppeteer');
 
     // go to the web
     await page.goto('https://whatismytimezone.com');
-    var ss = await page.screenshot({path: "timezone_america_chicago_screenshot.png"});
+    var ss = await page.screenshot({path: "screenshots/timezone_america_chicago_screenshot.png"});
 
 
-    await page.goto('https://rpodcast.shinyapps.io/shinycal');
+    await page.goto(shinycal_page);
     await page.waitForTimeout(9000);
 
-    var ss = await page.screenshot({path: "shinycal_america_chicago_screenshot.png"});
+    var ss = await page.screenshot({path: "screenshots/shinycal_america_chicago_screenshot.png"});
 
     // America/Denver
     await page.emulateTimezone('America/Denver');
@@ -56,13 +58,13 @@ const puppeteer = require('puppeteer');
 
     // go to the web
     await page.goto('https://whatismytimezone.com');
-    var ss = await page.screenshot({path: "timezone_america_denver_screenshot.png"});
+    var ss = await page.screenshot({path: "screenshots/timezone_america_denver_screenshot.png"});
 
 
-    await page.goto('https://rpodcast.shinyapps.io/shinycal');
+    await page.goto(shinycal_page);
     await page.waitForTimeout(9000);
 
-    var ss = await page.screenshot({path: "shinycal_america_denver_screenshot.png"});
+    var ss = await page.screenshot({path: "screenshots/shinycal_america_denver_screenshot.png"});
 
     // America/Los_Angeles
     await page.emulateTimezone('America/Los_Angeles');
@@ -71,13 +73,13 @@ const puppeteer = require('puppeteer');
 
     // go to the web
     await page.goto('https://whatismytimezone.com');
-    var ss = await page.screenshot({path: "timezone_america_los_angeles_screenshot.png"});
+    var ss = await page.screenshot({path: "screenshots/timezone_america_los_angeles_screenshot.png"});
 
 
-    await page.goto('https://rpodcast.shinyapps.io/shinycal');
+    await page.goto(shinycal_page);
     await page.waitForTimeout(9000);
 
-    var ss = await page.screenshot({path: "shinycal_america_los_angeles_screenshot.png"});
+    var ss = await page.screenshot({path: "screenshots/shinycal_america_los_angeles_screenshot.png"});
 
     await page.close();
 
