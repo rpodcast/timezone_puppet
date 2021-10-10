@@ -1,0 +1,8 @@
+.Renviron
+.Rhistory
+.Rproj.user
+.env
+inst/doc
+prototyping/*
+!prototyping/README.md
+README.html
